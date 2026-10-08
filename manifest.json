@@ -21,6 +21,18 @@
     "add-tab-to-group": {
       "suggested_key": { "default": "Ctrl+Alt+A" },
       "description": "Add the current tab to a tab group"
+    },
+    "next-group": {
+      "suggested_key": { "default": "Ctrl+Alt+PageDown" },
+      "description": "Switch to the next tab group"
+    },
+    "previous-group": {
+      "suggested_key": { "default": "Ctrl+Alt+PageUp" },
+      "description": "Switch to the previous tab group"
+    },
+    "toggle-group": {
+      "suggested_key": { "default": "Ctrl+Alt+O" },
+      "description": "Collapse/expand the current tab group"
     }
   },
   "browser_specific_settings": {
