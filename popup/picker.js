@@ -1,12 +1,9 @@
 (async function route() {
-    console.log("route");
     const mode = await browser.runtime.sendMessage({ type: "get-mode" });
 
     if (mode === "new-tab" || mode === "move-tab") {
-        console.log("mode", mode);
         document.querySelector("#heading").textContent = mode === "new-tab" ? "Open new tab in…" : "Move tab to…";
     } else {
-        console.log("no mode");
         location.replace("settings.html");
         return;
     }
@@ -30,7 +27,6 @@
         const button = document.createElement("BUTTON");
         button.textContent = group.title || "Unnamed group";
         button.dataset.color = group.color;
-        console.log(group.color);
         button.addEventListener("click", async () => {
             if (mode === "new-tab") {
                 await browser.runtime.sendMessage({ type: "new-tab-at-end-of-group", groupId: group.id, windowId: tab.windowId });
@@ -46,11 +42,13 @@
     }
     document.querySelector("#popup-content button")?.focus();
     document.addEventListener("keydown", (e) => {
-        if (e.key !== "ArrowDown" && e.key !== "ArrowUp") return;
+        if (e.key !== "ArrowDown" && e.key !== "ArrowUp") {
+            return;
+        }
         const buttons = [...document.querySelectorAll("#popup-content button")];
         const i = buttons.indexOf(document.activeElement);
         const step = e.key === "ArrowDown" ? 1 : -1;
-        const next = (i + step + buttons.length) % buttons.length; // wraps around
+        const next = (i + step + buttons.length) % buttons.length;
         buttons[next].focus();
         e.preventDefault();
     });
