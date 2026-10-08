@@ -1,0 +1,39 @@
+{
+  "description": "A collection of tab group related shortcuts.",
+  "manifest_version": 3,
+  "name": "Tab Group Shortcuts",
+  "version": "1.0",
+  "homepage_url": "https://github.com/filip042/tab-groups",
+  "icons": {
+    "48": "icons/icon-48.png"
+  },
+  "permissions": ["tabGroups"],
+  "background": { "scripts": ["background.js"] },
+  "commands": {
+    "new-tab-in-group": {
+      "suggested_key": { "default": "Ctrl+Alt+N" },
+      "description": "Open a new tab in the current tab group"
+    },
+    "new-tab-in-chosen-group": {
+      "suggested_key": { "default": "Ctrl+Alt+G" },
+      "description": "Open a new tab in a chosen tab group"
+    },
+    "add-tab-to-group": {
+      "suggested_key": { "default": "Ctrl+Alt+A" },
+      "description": "Add the current tab to a tab group"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "tabgroup-shortcuts@todo",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+  "action": {
+    "default_icon": "icons/icon-32.png",
+    "default_title": "Tab Group Shortcuts",
+    "default_popup": "popup/picker.html"
+  }
+}

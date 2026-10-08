@@ -1,0 +1,61 @@
+:root {
+    --bg: white;
+    --text: black;
+    --button-bg: #e5f2f2;
+    --focus: Highlight;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #131215;
+        --text: #e5f2f2;
+        --button-bg: #252428;
+    }
+}
+
+body {
+    margin: 10px;
+    min-width: 200px;
+    max-width: 320px;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.hidden {
+    display: none;
+}
+
+#popup-content {
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+}
+
+button {
+    border: none;
+    width: 100%;
+    margin: 2px 0;
+    padding: 6px 10px;
+    border-radius: 4px;
+    text-align: left;
+    font-size: 1em;
+    cursor: pointer;
+    color: inherit;
+    background-color: var(--group-color, var(--button-bg));
+    overflow-wrap: anywhere;
+}
+
+button:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 1px;
+}
+
+button[data-color="blue"]   { --group-color: #4a90e2; }
+button[data-color="cyan"]   { --group-color: #2bb3c0; }
+button[data-color="green"]  { --group-color: #3fa66b; }
+button[data-color="yellow"] { --group-color: #e0b52b; }
+button[data-color="orange"] { --group-color: #e8833a; }
+button[data-color="red"]    { --group-color: #d9534f; }
+button[data-color="pink"]   { --group-color: #e05a9c; }
+button[data-color="purple"] { --group-color: #8e6bd8; }
+button[data-color="grey"]   { --group-color: #8a8f98; }
