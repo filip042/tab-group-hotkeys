@@ -5,7 +5,7 @@
   "version": "1.0",
   "homepage_url": "https://github.com/filip042/tab-groups",
   "icons": {
-    "48": "icons/icon-48.png"
+    "48": "icons/icon.svg"
   },
   "permissions": ["tabGroups"],
   "background": { "scripts": ["background.js"] },
@@ -38,13 +38,14 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "tabgroup-shortcuts@filip042",
+      "strict_min_version": "140.0",
       "data_collection_permissions": {
         "required": ["none"]
       }
     }
   },
   "action": {
-    "default_icon": "icons/icon-32.png",
+    "default_icon": "icons/icon.svg",
     "default_title": "Tab Group Shortcuts",
     "default_popup": "popup/picker.html"
   }
