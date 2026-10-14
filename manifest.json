@@ -3,7 +3,7 @@
   "manifest_version": 3,
   "name": "Tab Group Shortcuts",
   "version": "1.0",
-  "homepage_url": "https://github.com/filip042/tab-groups",
+  "homepage_url": "https://github.com/filip042/tab-group-shortcuts",
   "icons": {
     "48": "icons/icon.svg"
   },
