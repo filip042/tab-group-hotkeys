@@ -1,4 +1,4 @@
-# Tab Group Shortcuts
+# Tab Group Hotkeys
 
 An extension that adds keyboard shortcuts for working with Firefox's built-in tab groups.
 
