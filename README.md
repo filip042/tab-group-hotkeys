@@ -2,6 +2,8 @@
 
 An extension that adds keyboard shortcuts for working with Firefox's built-in tab groups.
 
+Install from [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/tab-group-hotkeys/).
+
 ## Shortcuts
 
 | Action | Default Shortcut |
